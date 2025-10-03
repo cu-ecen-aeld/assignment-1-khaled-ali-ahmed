@@ -2,6 +2,9 @@
 # Tester script for assignment 1 and assignment 2
 # Author: Siddhant Jajoo
 
+ORIGINAL_DIR="$(pwd)"
+cd "$(dirname "$0")"
+
 set -e
 set -u
 
@@ -71,3 +74,5 @@ else
 	echo "failed: expected  ${MATCHSTR} in ${OUTPUTSTRING} but instead found"
 	exit 1
 fi
+
+cd "$ORIGINAL_DIR"
